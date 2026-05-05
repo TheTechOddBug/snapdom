@@ -2,6 +2,9 @@ const js = require("@eslint/js")
 const globals = require("globals")
 
 module.exports = [
+  {
+    ignores: ["dist/**", "node_modules/**", "packages/**/dist/**"]
+  },
   js.configs.recommended,
   {
     files: ["__tests__/**/*.js","src/**/*.js"],
